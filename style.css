@@ -56,6 +56,7 @@ nav a {
   align-items: start;
 }
 
+/*
 .hero img {
   width: 240px;
   height: 300px;
@@ -64,7 +65,16 @@ nav a {
   border-radius: 16px;
   margin-top: 20px;
 }
+*/
 
+.hero img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  margin-top: 20px;
+}
 
 /*
 .hero-grid {
