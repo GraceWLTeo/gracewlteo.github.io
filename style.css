@@ -56,7 +56,7 @@ nav a {
   align-items: start;
 }
 
-/*
+
 .hero img {
   width: 240px;
   height: 300px;
@@ -65,8 +65,9 @@ nav a {
   border-radius: 16px;
   margin-top: 20px;
 }
-*/
 
+
+/* For ovalish headshot
 .hero img {
   width: 240px;
   height: 400px;
@@ -75,6 +76,7 @@ nav a {
   border-radius: 50%;
   margin-top: 20px;
 }
+*/
 
 /*
 .hero-grid {
