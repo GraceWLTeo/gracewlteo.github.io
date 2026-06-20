@@ -67,12 +67,20 @@ nav a {
 
 
 .hero img {
-  width: 100%;
+  width: 80%;
   max-width: 280px;
   border-radius: 16px;
   margin-top: 20px;
 }
 
+/*
+.hero img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 16px;
+  margin-top: 20px;
+}
+*/
 
 
 /* For ovalish headshot
