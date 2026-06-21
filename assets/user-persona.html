@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Persona — Team Training Instructor</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f0ede8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 24px;
+    }
+
+    .persona-wrap {
+      width: 100%;
+      max-width: 860px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      border: 1px solid #d8d4ce;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    }
+
+    /* ── Left column ── */
+    .left-col {
+      background: #0C447C;
+      padding: 28px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .avatar {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: #185fa5;
+      border: 2px solid #85B7EB;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; font-weight: 500; color: #E6F1FB;
+      flex-shrink: 0;
+    }
+    .persona-name  { font-size: 16px; font-weight: 500; color: #E6F1FB; margin-bottom: 2px; }
+    .persona-role  { font-size: 12px; color: #85B7EB; line-height: 1.5; }
+    .divider       { height: 1px; background: #185fa5; }
+    .left-section-title {
+      font-size: 10px; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: #85B7EB; margin-bottom: 8px;
+    }
+    .left-item {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: 12px; color: #B5D4F4; line-height: 1.5; margin-bottom: 6px;
+    }
+    .left-item i { font-size: 14px; color: #85B7EB; flex-shrink: 0; margin-top: 1px; }
+    .tag-row       { display: flex; flex-wrap: wrap; gap: 5px; }
+    .tag {
+      font-size: 11px; padding: 2px 8px;
+      border-radius: 99px;
+      background: #185fa5; color: #B5D4F4;
+    }
+
+    /* Bar charts */
+    .bar-label-row {
+      display: flex; justify-content: space-between;
+      font-size: 11px; color: #85B7EB; margin-bottom: 4px;
+    }
+    .bar-track {
+      height: 6px; background: #185fa5;
+      border-radius: 3px; margin-bottom: 10px; overflow: hidden;
+    }
+    .bar-fill { height: 100%; border-radius: 3px; }
+
+    /* ── Right column ── */
+    .right-col {
+      padding: 24px;
+      display: flex; flex-direction: column; gap: 20px;
+      background: #ffffff;
+    }
+    .type-label {
+      font-size: 10px; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: #999; margin-bottom: 4px;
+    }
+    .quote-block {
+      border-left: 3px solid #185fa5;
+      padding: 10px 14px;
+      background: #f5f3f0;
+      border-radius: 0 8px 8px 0;
+      font-size: 13px; color: #555;
+      line-height: 1.6; font-style: italic;
+    }
+    .right-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .card {
+      border: 1px solid #e8e4de;
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .card-title {
+      font-size: 11px; font-weight: 500;
+      margin-bottom: 8px;
+      display: flex; align-items: center; gap: 5px;
+    }
+    .card-title i { font-size: 14px; }
+    .bullet-item {
+      font-size: 12px; color: #555;
+      line-height: 1.5; margin-bottom: 5px;
+      display: flex; gap: 6px;
+    }
+    .dot { flex-shrink: 0; width: 5px; height: 5px; border-radius: 50%; margin-top: 6px; }
+    .dot-blue  { background: #185fa5; }
+    .dot-coral { background: #993C1D; }
+    .dot-teal  { background: #0F6E56; }
+    .scenario-row {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 12px; color: #555;
+      padding: 6px 0;
+      border-bottom: 1px solid #f0ede8;
+    }
+    .scenario-row:last-child { border-bottom: none; }
+    .scenario-row i { font-size: 14px; color: #aaa; }
+
+    /* Caveat */
+    #caveat {
+      margin-top: 14px;
+      padding: 8px 14px;
+      background: #fef9ec;
+      border: 1px solid #f0d98a;
+      border-radius: 8px;
+      font-size: 11px; color: #7a5c0a;
+      display: flex; align-items: center; gap: 7px;
+      max-width: 860px; width: 100%;
+    }
+    #caveat i { font-size: 13px; color: #b8860b; flex-shrink: 0; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .persona-wrap { grid-template-columns: 1fr; }
+      .right-grid   { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="persona-wrap">
+
+  <!-- Left column -->
+  <div class="left-col">
+    <div>
+      <div class="avatar">AW</div>
+      <div style="margin-top:12px;">
+        <div class="persona-name">Amanda Waller</div>
+        <div class="persona-role">Team training instructor</div>
+        <div class="persona-role">12 years field experience · 4 years instructing</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div>
+      <div class="left-section-title">Background</div>
+      <div class="left-item">
+        <i class="ti ti-building-hospital" aria-hidden="true"></i>
+        Works at a regional team training center
+      </div>
+      <div class="left-item">
+        <i class="ti ti-users" aria-hidden="true"></i>
+        Runs 3–5 team training scenarios per week with trainee cohorts of 4–6
+      </div>
+      <div class="left-item">
+        <i class="ti ti-certificate" aria-hidden="true"></i>
+        Certified team training coach
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div>
+      <div class="left-section-title">Tech comfort</div>
+      <div class="bar-label-row"><span>Tech savvy</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:60%;background:#378ADD;"></div></div>
+      <div class="bar-label-row"><span>Data literacy</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:45%;background:#378ADD;"></div></div>
+      <!--
+	  <div class="bar-label-row"><span>Time during debrief</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:30%;background:#D85A30;"></div></div>
+	  -->
+    </div>
+
+    <div class="divider"></div>
+
+    <div>
+      <div class="left-section-title">Tools used today</div>
+      <div class="tag-row">
+        <span class="tag">Paper checklists</span>
+        <span class="tag">Video replay</span>
+        <span class="tag">Whiteboard</span>
+        <span class="tag">Memory</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right column -->
+  <div class="right-col">
+
+    <div>
+      <div class="type-label">Representative quote</div>
+      <div class="quote-block">
+        "I can't watch everyone and run the scenario at the same time - I need extra eyes and ears! By the time debrief comes around, I've already lost most of what happened. I need help remembering!"
+      </div>
+    </div>
+
+    <div class="right-grid">
+
+      <div class="card">
+        <div class="card-title" style="color:#0C447C;">
+          <i class="ti ti-target" aria-hidden="true"></i> Goals
+        </div>
+        <div class="bullet-item"><div class="dot dot-blue"></div>Give trainees specific, evidence-based feedback after each scenario</div>
+        <div class="bullet-item"><div class="dot dot-blue"></div>Identify which team member caused a breakdown, not just that one occurred</div>
+        <div class="bullet-item"><div class="dot dot-blue"></div>Track improvement across sessions for the same team</div>
+        <div class="bullet-item"><div class="dot dot-blue"></div>Run debrief efficiently within a tight schedule</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title" style="color:#712B13;">
+          <i class="ti ti-mood-frustrated" aria-hidden="true"></i> Frustrations
+        </div>
+        <div class="bullet-item"><div class="dot dot-coral"></div>Can't monitor all team members simultaneously during live scenarios</div>
+        <div class="bullet-item"><div class="dot dot-coral"></div>Paper checklists capture outcomes but not the process that led to them</div>
+        <div class="bullet-item"><div class="dot dot-coral"></div>Trainees dispute feedback that isn't backed by objective evidence</div>
+        <div class="bullet-item"><div class="dot dot-coral"></div>No easy way to compare one team's performance to a cohort</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title" style="color:#085041;">
+          <i class="ti ti-puzzle" aria-hidden="true"></i> Needs from the tool
+        </div>
+        <div class="bullet-item"><div class="dot dot-teal"></div>Ability to replay the training session</div>
+        <div class="bullet-item"><div class="dot dot-teal"></div>Ability to jump to specific moments, not just replaying everything</div>
+        <div class="bullet-item"><div class="dot dot-teal"></div>Helps in problem and error diagnoses</div>
+        <div class="bullet-item"><div class="dot dot-teal"></div>At-a-glance summary</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title" style="color:#555;">
+          <i class="ti ti-clock" aria-hidden="true"></i> Typical workflow
+        </div>
+        <div class="scenario-row"><i class="ti ti-player-play" aria-hidden="true"></i>Runs scenario (20–30 min)</div>
+        <div class="scenario-row"><i class="ti ti-eye" aria-hidden="true"></i>Reviews error summary (2 min)</div>
+        <div class="scenario-row"><i class="ti ti-movie" aria-hidden="true"></i>Replays 2–3 key moments (5 min)</div>
+        <div class="scenario-row"><i class="ti ti-messages" aria-hidden="true"></i>Leads team debrief discussion (15 min)</div>
+        <div class="scenario-row"><i class="ti ti-clipboard-list" aria-hidden="true"></i>Logs assessment notes and training recommendations</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="caveat">
+  <i class="ti ti-info-circle" aria-hidden="true"></i>
+  Illustrative persona — details are representative and not based on a specific individual.
+</div>
+
+</body>
+</html>
