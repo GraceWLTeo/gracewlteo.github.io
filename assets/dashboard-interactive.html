@@ -369,24 +369,24 @@ const roleColors = { tl:"#185fa5", a:"#0f6e56", b:"#8b3060", c:"#8a4f10" };
     flag    : null  OR  a string like "Repeat directive"
 */
 const commsData = [
-  { t:  8, speaker:"TL (Member 1)",   role:"tl", text:"Role A, take position. Role B, begin assessment.", flag:null },
-  { t: 14, speaker:"Member 2 (A)",    role:"a",  text:"In position. Confirmed status: unresponsive.", flag:null },
-  { t: 19, speaker:"TL (Member 1)",   role:"tl", text:"Role B, I need your status update.", flag:null },
-  { t: 24, speaker:"TL (Member 1)",   role:"tl", text:"Role B — status update, now.", flag:"Repeat directive" },
-  { t: 28, speaker:"Member 3 (B)",    role:"b",  text:"Copy — readings at critical threshold.", flag:null },
-  { t: 33, speaker:"TL (Member 1)",   role:"tl", text:"Role C, log that reading, timestamp 0:28.", flag:null },
-  { t: 38, speaker:"Member 4 (C)",    role:"c",  text:"Logged.", flag:null },
-  { t: 42, speaker:"Member 2 (A)",    role:"a",  text:"Intervention underway, monitoring response.", flag:null },
-  { t: 49, speaker:"TL (Member 1)",   role:"tl", text:"Role B, initiate secondary procedure.", flag:null },
-  { t: 55, speaker:"TL (Member 1)",   role:"tl", text:"Role B — secondary procedure.", flag:"Repeat directive" },
-  { t: 61, speaker:"Member 3 (B)",    role:"b",  text:"Procedure initiated, monitoring.", flag:null },
-  { t: 68, speaker:"Member 4 (C)",    role:"c",  text:"Procedure logged at 1:01.", flag:null },
-  { t: 74, speaker:"Member 2 (A)",    role:"a",  text:"Status improving — reading now 88.", flag:null },
-  { t: 79, speaker:"TL (Member 1)",   role:"tl", text:"Continue. Role C, note reading 88 at 1:14.", flag:null },
-  { t: 88, speaker:"Member 4 (C)",    role:"c",  text:"Logged. All vitals stable.", flag:null },
-  { t: 95, speaker:"TL (Member 1)",   role:"tl", text:"Role A, prep for handoff.", flag:null },
-  { t:102, speaker:"Member 2 (A)",    role:"a",  text:"Ready for handoff on your call.", flag:null },
-  { t:110, speaker:"TL (Member 1)",   role:"tl", text:"Team, stand by. Good work. Debrief in two.", flag:null },
+  { t:  8, speaker:"Team Leader",   role:"tl", text:"Role A, take position. Role B, begin assessment.", flag:null },
+  { t: 14, speaker:"Role A",    role:"a",  text:"In position. Confirmed status: unresponsive.", flag:null },
+  { t: 19, speaker:"Team Leader",   role:"tl", text:"Role B, I need your status update.", flag:null },
+  { t: 24, speaker:"Team Leader",   role:"tl", text:"Role B — status update, now.", flag:"Repeat directive" },
+  { t: 28, speaker:"Role B",    role:"b",  text:"Copy — readings at critical threshold.", flag:null },
+  { t: 33, speaker:"Team Leader",   role:"tl", text:"Role C, log that reading, timestamp 0:28.", flag:null },
+  { t: 38, speaker:"Role C",    role:"c",  text:"Logged.", flag:null },
+  { t: 42, speaker:"Role A",    role:"a",  text:"Intervention underway, monitoring response.", flag:null },
+  { t: 49, speaker:"Team Leader",   role:"tl", text:"Role B, initiate secondary procedure.", flag:null },
+  { t: 55, speaker:"Team Leader",   role:"tl", text:"Role B — secondary procedure.", flag:"Repeat directive" },
+  { t: 61, speaker:"Role B",    role:"b",  text:"Procedure initiated, monitoring.", flag:null },
+  { t: 68, speaker:"Role C",    role:"c",  text:"Procedure logged at 1:01.", flag:null },
+  { t: 74, speaker:"Role A",    role:"a",  text:"Status improving — reading now 88.", flag:null },
+  { t: 79, speaker:"Team Leader",   role:"tl", text:"Continue. Role C, note reading 88 at 1:14.", flag:null },
+  { t: 88, speaker:"Role C",    role:"c",  text:"Logged. All vitals stable.", flag:null },
+  { t: 95, speaker:"Team Leader",   role:"tl", text:"Role A, prep for handoff.", flag:null },
+  { t:102, speaker:"Role A",    role:"a",  text:"Ready for handoff on your call.", flag:null },
+  { t:110, speaker:"Team Leader",   role:"tl", text:"Team, stand by. Good work. Debrief in two.", flag:null },
 ];
 
 /*
@@ -396,7 +396,7 @@ const commsData = [
     angle  : degrees, 0=up, 90=right, 180=down, 270=left
 */
 const members = [
-  { id:"TL", label:"Member 1 (TL)", role:"tl", color:"#185fa5",
+  { id:"TL", label:"Team Leader", role:"tl", color:"#185fa5",
     keyframes:[
       { t:  0, x:0.30, y:0.35, angle: 60 },
       { t: 20, x:0.35, y:0.40, angle: 45 },
@@ -405,7 +405,7 @@ const members = [
       { t:120, x:0.33, y:0.36, angle: 20 },
     ]
   },
-  { id:"A", label:"Member 2 (A)", role:"a", color:"#0f6e56",
+  { id:"A", label:"Role A", role:"a", color:"#0f6e56",
     keyframes:[
       { t:  0, x:0.60, y:0.30, angle:180 },
       { t: 14, x:0.52, y:0.34, angle:200 },
@@ -414,7 +414,7 @@ const members = [
       { t:120, x:0.51, y:0.36, angle:190 },
     ]
   },
-  { id:"B", label:"Member 3 (B)", role:"b", color:"#8b3060",
+  { id:"B", label:"Role B", role:"b", color:"#8b3060",
     keyframes:[
       { t:  0, x:0.65, y:0.55, angle:120 },
       { t: 28, x:0.60, y:0.50, angle:155 },
@@ -423,7 +423,7 @@ const members = [
       { t:120, x:0.58, y:0.51, angle:165 },
     ]
   },
-  { id:"C", label:"Member 4 (C)", role:"c", color:"#8a4f10",
+  { id:"C", label:"Role C", role:"c", color:"#8a4f10",
     keyframes:[
       { t:  0, x:0.22, y:0.60, angle: 10 },
       { t: 38, x:0.28, y:0.55, angle: 30 },
@@ -801,7 +801,7 @@ const errorSummaries = {
 };
 
 const memberOrder = [
-  { role:"tl", label:"Team Leader (TL)", color:"#185fa5" },
+  { role:"tl", label:"Team Leader", color:"#185fa5" },
   { role:"a",  label:"Role A",  color:"#0f6e56" },
   { role:"b",  label:"Role B",  color:"#8b3060" },
   { role:"c",  label:"Role C",  color:"#8a4f10" },
