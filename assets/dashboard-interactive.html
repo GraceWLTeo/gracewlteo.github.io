@@ -425,6 +425,7 @@ const DURATION = 120;
 
 const roleColors = { tl:"#185fa5", a:"#0f6e56", b:"#8b3060", c:"#8a4f10" };
 
+
 const commsData = [
   { t:  8, speaker:"Team Leader",   role:"tl", text:"Role A, take position. Role B, begin assessment.", flag:null },
   { t: 14, speaker:"Role A",    role:"a",  text:"In position. Confirmed status: unresponsive.", flag:null },
@@ -434,8 +435,8 @@ const commsData = [
   { t: 33, speaker:"Team Leader",   role:"tl", text:"Role C, log that reading, timestamp 0:28.", flag:null },
   { t: 38, speaker:"Role C",    role:"c",  text:"Logged.", flag:null },
   { t: 42, speaker:"Role A",    role:"a",  text:"Intervention underway, monitoring response.", flag:null },
-  { t: 47, speaker:"Role A",    role:"a",  text:"Oh no, Role B, can you...", flag:null },
-  { t: 49, speaker:"Team Leader",   role:"tl", text:"Role B, initiate secondary procedure.", flag:null },
+  { t: 47, speaker:"Role A",    role:"a",  text:"Oh no, what's that...?", flag:null },
+  { t: 51, speaker:"Team Leader",   role:"tl", text:"Role B, initiate secondary procedure.", flag:null },
   { t: 55, speaker:"Team Leader",   role:"tl", text:"Role B — secondary procedure.", flag:"Repeat directive" },
   { t: 61, speaker:"Role B",    role:"b",  text:"Procedure initiated, monitoring.", flag:null },
   { t: 68, speaker:"Role C",    role:"c",  text:"Procedure logged at 1:01.", flag:null },
@@ -470,7 +471,7 @@ const members = [
     keyframes:[
       { t:  0, x:0.65, y:0.55, angle:120 },
       { t: 28, x:0.60, y:0.50, angle:155 },
-      { t: 61, x:0.58, y:0.48, angle:160 },
+      { t: 57, x:0.58, y:0.50, angle:20 },
       { t: 95, x:0.57, y:0.50, angle:170 },
       { t:120, x:0.58, y:0.51, angle:165 },
     ]
@@ -489,8 +490,9 @@ const members = [
 const zones = [
   { x:0.10, y:0.06, w:0.82, h:0.76, label:"Primary task area", fill:"#e8e4de", stroke:"#c8c4bc" },
   { x:0.14, y:0.11, w:0.20, h:0.20, label:"Zone 1",            fill:"#ddd9d0", stroke:"#c0bcb4" },
-  { x:0.68, y:0.11, w:0.20, h:0.20, label:"Zone 2",            fill:"#ddd9d0", stroke:"#c0bcb4" },
+  { x:0.49, y:0.60, w:0.35, h:0.10, label:"Zone 2",            fill:"#ddd9d0", stroke:"#c0bcb4" },
 ];
+
 
 const focal = { x:0.49, y:0.43, label:"Focal point" };
 
