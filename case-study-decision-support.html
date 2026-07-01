@@ -98,26 +98,34 @@ Helping instructors evaluate teams with multimodal behavioral data.
 <ul>
 
 <p>
-<li>Research revealed that the challenge was not simply displaying data. Instructors needed to understand why performance issues occurred and diagnose underlying causes.
+<li>Research showed that instructors needed to diagnose the causes of performance issues—not just review individual data streams. 
 </p>
   
 <p>
-<li>Instructors were less interested in viewing individual data streams than understanding the causes of performance problems.
+<li>For example, location data showed what happened, while communication data explained why it happened.
+</p>
+  
+<p>
+<li>This insight led to a key design requirement: synchronize multiple data streams on a shared timeline to support diagnosis and root-cause analysis.
+</p>
+  
+<p>
+<li>The interface aligned location (from GPS), head orientation (from IMU), and communication transcripts (from audio recordings) within a common timeline, 
+enabling instructors to correlate events and identify contributing factors.
 </p>
 
 <p>
-<li>For example, location data might show that team members were out of position, but communication data was often required to understand why the issue occurred.
+<li>
+A bird's-eye view displayed team members' locations and head orientation throughout the task, while a synchronized communication transcript provided the context needed to interpret team behaviors.
 </p>
-
-<p>
-<li>This led to a key requirement: instructors needed the view multiple data streams on a common timeline to support diagnosis and root-cause analysis.
-</p>
-</ul>
 
 <!--  For the static pict of the dashboard mockup-->
-<img class="case-image" src="assets/dashboard-mockup-raw.png" alt="Dashboard Placeholder">
+<img class="case-image" src="assets/dashboard-mockup-raw.png" alt="Dashboard Raw Placeholder">
 
-
+<p>
+<li></li>  
+</p>
+  
 <!-- For the interactive version of the dashboard mockup-->  
 <!--  
 <iframe 
@@ -143,14 +151,38 @@ Helping instructors evaluate teams with multimodal behavioral data.
 
 <ul>
 <p>
-<li>One challenge was that instructors evaluated concepts such as communication, coordination, and leadership, but these dimensions were difficult to measure directly.
+<li>One challenge was that instructors evaluated abstract concepts such as communication, coordination, and leadership, 
+yet these dimensions were not directly observable in the raw data. 
 </p>
 
 <p>
-<li>To bridge this gap, I developed a measurement framework that translated evaluation dimensions into observable behaviors and metrics.
+<li>Through interviews and observations, I identified the behavioral cues instructors relied on when making these assessments
+and developed a measurement framework to operationalize them. 
 </p>
-</ul>
+
+<p>
+<li>For example, repeated instructions from a team leader served as an indicator of ineffective communication. 
+</p>
   
+<p>
+<li>These behavioral indicators became a core part of the display, 
+enabling instructors to assess team performance using the same cues they naturally used during evaluation.
+</p>
+
+<img class="case-image" src="assets/dashboard-mockup-metrics.png" alt="Dashboard Placeholder">
+
+
+
+<!-- For the interactive version of the dashboard mockup-->  
+<iframe 
+  src="assets/dashboard-interactive.html" 
+  width="100%" 
+  height="680px" 
+  style="border: none; border-radius: 12px;"
+  title="Interactive team assessment dashboard mockup">
+</iframe>
+
+</ul>  
 </div>
 </section>
 
