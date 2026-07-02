@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decision Support Platform Case Study</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<div class="container">
+<div><strong>Grace Teo</strong></div>
+<div>
+<a href="index.html">Home</a>
+<a href="GraceTeo_Resume.pdf">Resume</a>
+</div>
+</div>
+</nav>
+
+<section>
+<div class="container">
+
+<h1>Decision Support Platform</h1>
+
+<p>
+Helping instructors evaluate teams with multimodal behavioral data.
+</p>
+
+<br>
+
+<p><strong>Role:</strong> Lead Researcher</p>
+<p><strong>Methods & Tools:</strong> Interviews, Task Analysis, Journey Mapping, Personas, Thematic Analysis, Measurement Framework Development, AI-based tools</p>
+<p><strong>Budget:</strong> >$2M </p>
+<p><strong>Duration:</strong> > 2 years </p>
+<p><strong>Cross-functional collaborations:</strong> Product Nanager, System Engineers, UX Designer, Subject-Matter-Experts (SMEs).</p>
+
+<img class="case-image" src="assets/star-summary3.png" alt="STAR Summary Placeholder">
+
+<img class="case-image" src="assets/overview.png" alt="Overview Placeholder">
+
+<h2>Goal</h2>
+
+<ul>
+<li>Support instructors with objective performance insights.</li>
+<li>Reduce subjectivity in evaluations.</li>
+<li>Improve training and team performance.</li>
+</ul>
+
+<h2>Problem</h2>
+<ul>
+<li>A single instructor is typically responsible for observing and evaluating an entire team's training session.</li>
+<li>Evaluations are often subjective, inconsistent, and difficult to standardize.</li>
+</ul>
+
+<!--
+<img class="case-image" src="assets/research-impact2.png" alt="Research Impact Placeholder">
+-->
+
+<h2>Process</h2>
+
+<ul>
+<li>I applied design thinking process to ensure the solution was user-centered.</li>
+</ul>
+
+<img class="case-image" src="assets/design-process4.png" alt="Design Process Placeholder">
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Phase 1: EMPATHIZE - Understanding how Instructors Decide on Evaluations</h2>
+
+<ul>
+<li>I conducted task analysis, multiple interviews and observations to understand the instructor-user's workflows, information needs, and decision-making processes.</li>
+</ul>
+
+<img class="case-image" src="assets/Methods3.png" alt="Research Methods Placeholder">
+
+<ul>
+<li>From the thematic analysis, I developed the user persona and journey map.</li>
+</ul>
+
+<img class="case-image" src="assets/user-persona5.png" alt="Persona Placeholder">
+<img class="case-image" src="assets/journey-map6.png" alt="Journey Map Placeholder">
+
+<!--
+  <iframe
+  src="assets/user-persona.html"
+  width="100%"
+  height="520px"
+  style="border: none; border-radius: 12px;"
+  title="User persona — team training instructor">
+</iframe>
+-->
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Phase 2: DEFINE - Core Problem #1</h2>
+
+<h3>Problem: Instructors Needed Explanations, Not Just Data</h3>
+
+<ul>
+<li>Research showed that instructors don't just need data, they also needed to diagnose the causes and explanations of performance issues.</li>
+<li>For example, location data can show that someone was not at their duty station at a critical time, but communication data can explain why it happened.</li>
+<li>This led to the first key insight.</li>
+</ul>
+
+<img class="case-image" src="assets/core-finding-insights_first.png" alt="First Core Finding & Insight Placeholder" style="max-width:40%;">
+
+<h2>Phase 3: IDEATE - Develop solution for core problem #1</h2>
+
+<p>
+We designed a display that aligned location (from GPS), head orientation (from IMUs), and communication transcripts (from audio recordings) on a common timeline,
+enabling instructors to correlate events and identify contributing factors.
+A bird's-eye view displayed team members' locations and head orientation throughout the task, while a synchronized communication transcript provided the context needed to interpret team behaviors.
+</p>
+
+<!--  For the static pict of the dashboard mockup-->
+<img class="case-image" src="assets/dashboard-mockup-birdseye-view.png" alt="Dashboard Raw Placeholder">
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Phase 2: DEFINE - Core Problem #2</h2>
+
+<h2>Problem: Instructors Can't Use Data From Sensors Directly For Evaluations</h2>
+
+<ul>
+<li>Instructors evaluated the teams on certain evaluation dimensions, e.g., "team communication," "coordination."</li>
+<li>These dimensions were high-level and cannot be directly observed in the raw data.</li>
+<li>This led to the second key insight.</li>
+</ul>
+
+<img class="case-image" src="assets/core-finding-insights_second.png" alt="Second Core Finding & Insight Placeholder">
+
+<h2>Phase 3: IDEATE - Develop solution for core problem #1</h2>
+
+<ul>
+<li>Through interviews and instructor notes/handbook, I identified the behavioral cues instructors relied on when making these assessments and developed a measurement framework to operationalize them.</li>
+<li>For example, repeated instructions from a team leader served as an indicator of ineffective team communication.</li>
+<li>These behavioral indicators became a critical part of the display since they presented the data in terms of the same behavioral cues instructors naturally used during evaluation.</li>
+</ul>
+
+<img class="case-image" src="assets/dashboard-mockup-beh-metrics.png" alt="Dashboard Placeholder">
+
+<h2>Phase 4: PROTOTYPE</h2>
+
+<ul>
+<li>A lo-fi and interactive decision support platform prototype was developed.</li>
+<li>Testers could playback the training session and view where each member was, the direction they were facing, and what was communicated during the session.</li>
+<li>Testers could also fast-forward, rewind, or jump to any timepoint within the session. Playback speed could be adjusted.</li>
+<li>There was also a "Behavioral Summary" section where instructors could view when specific behavioral cues were observed.</li>
+<li>These cues aligned with what they would typically look out for when evaluating the team on the evaluation dimensions.</li>
+</ul>
+
+<!--
+<a href="dashboard-mockup.html">View dashboard mockup</a>
+-->
+
+<!-- For the interactive version of the dashboard mockup-->
+<iframe
+  src="assets/dashboard-interactive.html"
+  width="100%"
+  height="680px"
+  style="border: none; border-radius: 12px;"
+  title="Interactive team assessment dashboard mockup">
+</iframe>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Data Integration and Trust</h2>
+
+<ul>
+<li>The platform relied on multiple data sources collected from different sensors and systems.</li>
+<li>To support diagnosis, these data streams needed to be accurately synchronized on a common timeline.</li>
+<li>Even small timing discrepancies could lead instructors to draw incorrect conclusions about the relationship between behaviors and outcomes.</li>
+<li>Working closely with engineers, I identified critical points in the data pipeline where synchronization and integration errors could occur and recommended validation checks to verify data quality before integration.</li>
+<li>These recommendations were estimated to improve data accuracy by 20–30%.</li>
+</ul>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Impact</h2>
+
+<ul>
+<li>Defined information requirements for instructor workflows</li>
+<li>Developed a behavioral measurement framework</li>
+<li>Influenced visualization concepts and information architecture</li>
+<li>Supported root-cause analysis through synchronized multimodal data views</li>
+<li>Improved confidence in integrated data through validation recommendations</li>
+<li>Established a scalable foundation capable of supporting hundreds of instructors</li>
+</ul>
+
+</div>
+</section>
+
+<footer>
+<p>
+<a href="index.html">Back to Home</a>
+</p>
+</footer>
+
+</body>
+</html>
