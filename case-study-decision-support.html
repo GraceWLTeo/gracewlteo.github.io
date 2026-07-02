@@ -59,7 +59,9 @@ Helping instructors evaluate teams with multimodal behavioral data.
 </p>
 </ul> 
 
+<!--
 <img class="case-image" src="assets/research-impact2.png" alt="Research Impact Placeholder">
+-->
 
   
 <h2>Process</h2>  
@@ -89,6 +91,17 @@ Helping instructors evaluate teams with multimodal behavioral data.
 
 <img class="case-image" src="assets/methods.png" alt="Research Methods Placeholder">
 
+
+<ul>  
+<p>
+<li>From the thematic analysis, I developed the user persona and journey map.
+</p>
+</ul>
+  
+<img class="case-image" src="assets/user-persona.png" alt="Persona Placeholder">
+<img class="case-image" src="assets/journey-map.png" alt="Journey Map Placeholder">
+
+  
   
 <!--
   <iframe
@@ -100,39 +113,33 @@ Helping instructors evaluate teams with multimodal behavioral data.
 </iframe>
 -->
 
-
-  
-<img class="case-image" src="assets/user-persona.png" alt="Persona Placeholder">
-<img class="case-image" src="assets/journey-map.png" alt="Journey Map Placeholder">
-
-  
+ 
 </div>
 </section>
 
 <section>
 <div class="container">
 
-<h2>Key Finding: Instructors Needed Explanations, Not Just Data</h2>
+<h2>Phase 2: DEFINE - Core Problem #1</h2>
+
+<h2>Problem: Instructors Needed Explanations, Not Just Data</h2>
 <ul>
 
 <p>
-<li>Research showed that instructors needed to diagnose the causes of performance issues—not just review individual data streams. 
-</p>
-  
-<p>
-<li>For example, location data showed what happened, while communication data explained why it happened.
-</p>
-  
-<p>
-<li>This insight led to a key design requirement: synchronize multiple data streams on a shared timeline to support diagnosis and root-cause analysis.
-</p>
-  
-<p>
-<li>The interface aligned location (from GPS), head orientation (from IMUs), and communication transcripts (from audio recordings) within a common timeline, 
-enabling instructors to correlate events and identify contributing factors.
+<li>Research showed that instructors don't just need data, they also needed to diagnose the causes and explanations of performance issues. 
+<li>For example, location data can show that someone was not at their duty station at a critical time, but communication data can explained why it happened.
+<li>This led to the first key insight.
 </p>
 
+ 
+<img class="case-image" src="assets/core-findings-insights_first" alt="First Core Finding & Insight Placeholder">
+
+
+<h2>Phase 3: IDEATE - Develop solution for core problem #1</h2>
+  
 <p>
+<li>We designed a display that aligned location (from GPS), head orientation (from IMUs), and communication transcripts (from audio recordings) on a common timeline, 
+enabling instructors to correlate events and identify contributing factors.
 <li>A bird's-eye view displayed team members' locations and head orientation throughout the task, while a synchronized communication transcript provided the context needed to interpret team behaviors.
 </p>
 
@@ -144,42 +151,44 @@ enabling instructors to correlate events and identify contributing factors.
 
 <section>
 <div class="container">
-
-<h2>Translating User-defined Evaluation Criteria into Behavioral Measures</h2>
-
-<ul>
-<p>
-<li>One challenge was that instructors evaluated abstract concepts such as communication, coordination, and leadership, 
-yet these dimensions were not directly observable in the raw data. 
-</p>
-
-<p>
-<li>Through interviews and observations, I identified the behavioral cues instructors relied on when making these assessments
-and developed a measurement framework to operationalize them. 
-</p>
-
-<p>
-<li>For example, repeated instructions from a team leader served as an indicator of ineffective communication. 
-</p>
   
+<h2>Phase 2: DEFINE - Core Problem #2</h2>
+
+<h2>Problem: Instructors Can't Use Data From Sensors Directly For Evaluations</h2>  
+<ul>
+
 <p>
-<li>These behavioral indicators became a core part of the display, 
-enabling instructors to assess team performance using the same cues they naturally used during evaluation.
+<li>Instructors evaluated the teams on certain evaluation dimensions, e.g., "team communication", "coordination."
+<li>These dimenssions were high-level cannot be directly observed in the raw data. 
+<li>This led to the second key insight.
+</p>
+ 
+<img class="case-image" src="assets/core-findings-insights_second" alt="Second Core Finding & Insight Placeholder">
+
+  
+<h2>Phase 3: IDEATE - Develop solution for core problem #1</h2>  
+
+<p>
+<li>Through interviews and instructor notes/handbook, I identified the behavioral cues instructors relied on when making these assessments
+and developed a measurement framework to operationalize them. 
+<li>For example, repeated instructions from a team leader served as an indicator of ineffective team communication. 
+<li>These behavioral indicators became a critical part of the display since they presented the data in terms of the same behavioral cues 
+instructors naturally used during evaluation.
 </p>
 
 <img class="case-image" src="assets/dashboard-mockup-metrics.png" alt="Dashboard Placeholder">
 
-<p>
-<li>The decision support tool was interactive and allowed instructors to playback how the team performed.   
-</p>
 
-<p>
-<li>They could go to any timepoint and view where each member was, the direction they were facing, and what was communicated around that timepoint.   
-</p>
+<h2>Phase 4: PROTOTYPE</h2>
 
+<ul>
+  
 <p>
+<li>A lo-fi and interactive decision support platform prototype was developed.   
+<li>Testers could playback the training session and view where each member was, the direction they were facing, and what was communicated during the session.
+<li>Testers could also fast-forward, rewind, or jump to any timepoint within the session. Playback speed could be adjusted.  
 <li>There was also a "Behavioral Summary" section where instructors could view when specific behavioral cues were observed.
-These cues aligned with what they would typically look out for when evaluating the team on the evaluation dimensions.   
+<li>These cues aligned with what they would typically look out for when evaluating the team on the evaluation dimensions.   
 </p>
    
 <!--
@@ -207,18 +216,10 @@ These cues aligned with what they would typically look out for when evaluating t
 
 <ul>
 <p>
-<li>The platform relied on multiple data sources collected from different sensors and systems. To support diagnosis, these data streams needed to be accurately synchronized on a common timeline.
-</p>
-
-<p>
+<li>The platform relied on multiple data sources collected from different sensors and systems. 
+<li>To support diagnosis, these data streams needed to be accurately synchronized on a common timeline.
 <li>Even small timing discrepancies could lead instructors to draw incorrect conclusions about the relationship between behaviors and outcomes.
-</p>
-
-<p>
 <li>Working closely with engineers, I identified critical points in the data pipeline where synchronization and integration errors could occur and recommended validation checks to verify data quality before integration.
-</p>
-
-<p>
 <li>These recommendations were estimated to improve data accuracy by 20–30%.
 </p>
 </ul>
