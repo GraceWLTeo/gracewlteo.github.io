@@ -761,19 +761,41 @@ function requestLoop() {
     const dt = (now - prev) / 1000;
     prev = now;
     currentTime = Math.min(currentTime + dt * speed, DURATION);
-    draw(); updateTimeline(); updateComms();
-    if (currentTime >= DURATION) { setPlaying(false); return; }
+    draw();
+    updateTimeline();
+    updateComms();
+
+    if (currentTime >= DURATION) {
+
+      setPlaying(false);
+
+      gtag('event', 'dashboard_completed', {
+        completion_time_seconds: Math.round(DURATION)
+      });
+
+      return;
+    }
+   
     lastRaf = requestAnimationFrame(loop);
   }
   lastRaf = requestAnimationFrame(loop);
 }
+ 
+btnPlay.addEventListener("click", () => {
+  setPlaying(!playing);
 
-btnPlay.addEventListener("click", () => setPlaying(!playing));
+  gtag('event', 'dashboard_play_clicked', {
+    action: playing ? 'pause' : 'play'
+  });
+});
 
+  
 document.getElementById("btn-restart").addEventListener("click", () => {
   currentTime = 0;
   setPlaying(false);
   draw(); updateTimeline(); updateComms();
+
+  gtag('event', 'dashboard_restart_clicked');
 });
 
 const speeds = [1, 2, 4];
@@ -783,6 +805,10 @@ btnSpeed.addEventListener("click", () => {
   speedIdx = (speedIdx + 1) % speeds.length;
   speed = speeds[speedIdx];
   btnSpeed.textContent = speed + "×";
+
+  gtag('event', 'playback_speed_changed', {
+    speed: speed
+  });
 });
 
 /* ══════════════════════════════════════════════════════════════
@@ -796,6 +822,10 @@ function scrubTo(e) {
   const pct  = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
   currentTime = pct * DURATION;
   draw(); updateTimeline(); updateComms();
+
+  gtag('event', 'timeline_scrubbed', {
+    timestamp_seconds: Math.round(currentTime)
+});
 }
 
 bar.addEventListener("mousedown", e => { scrubbing = true; setPlaying(false); scrubTo(e); });
@@ -830,6 +860,10 @@ canvas.addEventListener("click", e => {
 
   if (hit) {
     filteredRole = filteredRole === hit ? null : hit;
+
+    gtag('event', 'member_filtered', {
+      member: hit
+    });
   } else {
     filteredRole = null;
   }
@@ -851,7 +885,13 @@ canvas.addEventListener("click", e => {
 document.querySelectorAll(".legend-item").forEach(li => {
   li.addEventListener("click", () => {
     const role = li.dataset.role;
+
     filteredRole = filteredRole === role ? null : role;
+    
+    gtag('event', 'legend_filter_clicked', {
+      member: role
+    });
+    
     filterLabel.classList.toggle("visible", filteredRole !== null);
     if (filteredRole) {
       filterLabel.innerHTML = `<i class="ti ti-x" style="font-size:11px;"></i> ${li.lastChild.textContent.trim()}`;
@@ -1038,6 +1078,9 @@ let overlayOpen = false;
 
 function openOverlay() {
   overlayOpen = true;
+  
+  gtag('event', 'error_analysis_opened');
+
   overlay.classList.add("visible");
   btnErrors.classList.add("active");
   requestAnimationFrame(() => renderBars("all"));
@@ -1056,6 +1099,11 @@ document.querySelectorAll(".err-tab").forEach(tab => {
     document.querySelectorAll(".err-tab").forEach(t => t.classList.remove("active"));
     tab.classList.add("active");
     renderBars(tab.dataset.type);
+
+    gtag('event', 'error_category_selected', {
+      category: tab.dataset.type
+    });
+    
   });
 });
 
