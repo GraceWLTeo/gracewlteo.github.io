@@ -230,15 +230,26 @@
 <!--
 <a href="dashboard-mockup.html">View dashboard mockup</a>
 -->
-
-<!-- For the interactive version of the dashboard mockup-->
+ 
+<!-- For the interactive version of the dashboard mockup -->
 <iframe
   src="assets/dashboard-interactive.html"
   width="100%"
   height="680px"
   style="border: none; border-radius: 12px;"
-  title="Interactive team assessment dashboard mockup">
+  title="Interactive team assessment dashboard mockup"
+  id="dashboardPrototype">
 </iframe>
+
+<script>
+  // Track when the interactive dashboard is loaded
+  document.getElementById("dashboardPrototype").addEventListener("load", function() {
+    gtag('event', 'prototype_opened', {
+      'prototype_name': 'team_assessment_dashboard'
+    });
+  });
+</script>
+ 
 
 </div>
 </section>
