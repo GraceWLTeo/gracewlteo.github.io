@@ -14,6 +14,7 @@
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
+
 gtag('config', 'G-Z4S8E37RPM');
 
 gtag('event', 'case_study_view', {
@@ -58,7 +59,6 @@ Human-Agent Teaming in Complex Operational Environments
 Researching how humans and autonomous agents can work together effectively when tasks are complex, dynamic, and consequences matter.
 </p>
 
-
 <div class="case-meta">
 
 <div>
@@ -78,7 +78,7 @@ Task Analysis, Scenario Design, Behavioral Research, Human Factors
 
 <div>
 <strong>Output</strong>
-Human-Agent Teaming Requirements & Research Framework
+Human-Agent Teaming Requirements & Research Frameworks
 </div>
 
 </div>
@@ -111,6 +111,75 @@ I studied human-agent teaming in complex operational environments to understand 
 The goal was not to automate as much of the work as possible. The goal was to determine which responsibilities should remain with the human, which could be delegated to an agent, and what information and intervention mechanisms were necessary for the team to remain effective.
 
 </div>
+
+</div>
+
+</section>
+
+
+<!-- RESEARCH FOUNDATIONS -->
+
+<section>
+
+<div class="container">
+
+<h2>Research Foundations</h2>
+
+<p>
+The analysis was grounded in established human-automation and human-autonomy teaming research, particularly research on function allocation, levels of automation, human-agent interdependence, and the cognitive demands created when people supervise increasingly autonomous systems.
+</p>
+
+<div class="insight-grid">
+
+<div class="insight-card">
+
+<h3>Function Allocation</h3>
+
+<p>
+Human-machine function allocation considers how system functions and tasks should be distributed between people and technology, including the interdependencies created by different allocations.
+</p>
+
+<p class="case-caption">
+Roth et al. (2019)
+</p>
+
+</div>
+
+
+<div class="insight-card">
+
+<h3>Levels of Automation</h3>
+
+<p>
+Parasuraman, Sheridan, and Wickens (2000) distinguish different types and levels of automation across information acquisition, information analysis, decision/action selection, and action implementation.
+</p>
+
+<p class="case-caption">
+Parasuraman, Sheridan & Wickens (2000)
+</p>
+
+</div>
+
+
+<div class="insight-card">
+
+<h3>Human-Autonomy Teaming</h3>
+
+<p>
+Human-autonomy teaming treats autonomous agents as team members with distinct roles working interdependently with humans toward a shared goal.
+</p>
+
+<p class="case-caption">
+O'Neill et al. (2023)
+</p>
+
+</div>
+
+</div>
+
+<p>
+These established concepts informed the project-specific frameworks and taxonomies used to analyze the operational scenarios.
+</p>
 
 </div>
 
@@ -176,7 +245,195 @@ How does the team detect, communicate, and recover when either teammate makes a 
 </section>
 
 
-<!-- RESEARCH APPROACH -->
+<!-- TASK ALLOCATION FRAMEWORK -->
+
+<section>
+
+<div class="container">
+
+<h2>Framework 1: Human-Agent Task Allocation</h2>
+
+<p>
+The first framework organized the analysis around the distribution of work between human and agent. This was informed by the function-allocation literature, which emphasizes analyzing operational demands, alternative distributions of work, interdependencies, and tradeoffs between possible team configurations. :contentReference[oaicite:1]{index=1}
+</p>
+
+<p>
+For each task, I considered not only <em>who performs the task</em>, but also who is responsible for decision making, monitoring, and recovery.
+</p>
+
+<div class="insight-grid">
+
+<div class="insight-card">
+
+<h3>Human-Led</h3>
+
+<p>
+The human performs the task and retains primary decision authority.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Agent-Led</h3>
+
+<p>
+The agent performs the task within defined operating conditions.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Collaborative</h3>
+
+<p>
+Human and agent contribute complementary capabilities to the same task.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Agent Recommends</h3>
+
+<p>
+The agent analyzes information or generates options while the human makes the decision.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Agent Executes</h3>
+
+<p>
+The agent performs the action while the human retains supervisory responsibility.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Adaptive Allocation</h3>
+
+<p>
+Responsibility can shift between human and agent as task conditions change.
+</p>
+
+</div>
+
+</div>
+
+<div class="case-callout">
+
+<strong>Key insight:</strong>
+
+Task allocation is not simply a question of “human versus AI.” It can involve different allocations of sensing, analysis, decision making, action, monitoring, and recovery.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- AUTOMATION MANAGEMENT -->
+
+<section>
+
+<div class="container">
+
+<h2>Framework 2: Human Control and Automation Management</h2>
+
+<p>
+The task-allocation analysis was complemented by established models of human interaction with automation. Parasuraman, Sheridan, and Wickens (2000) describe automation across different stages of information processing and across levels ranging from manual performance to highly automated operation. :contentReference[oaicite:2]{index=2}
+</p>
+
+<p>
+Within this broader literature, different automation-management strategies change what the human is expected to do.
+</p>
+
+<div class="insight-grid">
+
+<div class="insight-card">
+
+<h3>Human-Led Control</h3>
+
+<p>
+The human performs the task and the system primarily provides information or decision support.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Management by Consent</h3>
+
+<p>
+The automation proposes an action, but the human must explicitly authorize it before execution.
+</p>
+
+<p class="case-caption">
+Olson & Sarter (2001)
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Collaborative Control</h3>
+
+<p>
+Human and agent jointly contribute to the task, with responsibility distributed according to capability and context.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Management by Exception</h3>
+
+<p>
+The automation handles routine operations while the human intervenes when an exception or boundary condition requires human involvement.
+</p>
+
+<p class="case-caption">
+Dekker & Woods (1999)
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Highly Autonomous Operation</h3>
+
+<p>
+The agent performs actions with limited or no continuous human intervention within its defined operating envelope.
+</p>
+
+</div>
+
+</div>
+
+<p>
+These modes should not be interpreted as a simple progression from “bad” to “good” or from “less AI” to “more AI.” The appropriate strategy depends on task demands, consequences of error, system reliability, human workload, and how readily the human can detect and respond to exceptions.
+</p>
+
+<div class="case-callout">
+
+<strong>Human factors implication:</strong>
+
+Management by Exception can reduce the need for continuous human involvement, but it also places new demands on the human: detecting exceptions, maintaining sufficient awareness of system state, and taking effective control when intervention is required. Research has identified these intervention and situation-awareness challenges as important issues in supervisory control. :contentReference[oaicite:3]{index=3}
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROCESS -->
 
 <section>
 
@@ -207,7 +464,7 @@ Identified opportunities for the human teammate to detect, intervene in, or comp
 </li>
 
 <li>
-Examined how workload, situation awareness, trust, and information availability could affect human intervention.
+Considered workload, situation awareness, trust, and information availability as factors affecting human intervention.
 </li>
 
 </ul>
@@ -217,165 +474,20 @@ Examined how workload, situation awareness, trust, and information availability 
 </section>
 
 
-<!-- TASK ALLOCATION -->
+<!-- FAILURE TAXONOMY -->
 
 <section>
 
 <div class="container">
 
-<h2>Phase 1: Understand — Decomposing the Team's Work</h2>
+<h2>Framework 3: Human-Agent Failure & Recovery Taxonomy</h2>
 
 <p>
-The first step was to understand the work before deciding what should be automated.
+A second project-specific taxonomy focused on what could happen when the team did not behave as expected.
 </p>
 
 <p>
-Rather than beginning with a particular autonomous capability, I decomposed the operational scenarios into individual tasks and subtasks. Each task was examined in terms of its information requirements, decision requirements, timing, consequences of failure, and potential for human or agent involvement.
-</p>
-
-<div class="case-callout">
-
-<strong>Key question:</strong>
-
-What does the team need to accomplish, and what is the appropriate role for each teammate at each point in the task?
-
-</div>
-
-<p>
-This resulted in a task-level view of human-agent responsibilities rather than treating the autonomous system as a single black-box capability.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- HUMAN VS AGENT -->
-
-<section>
-
-<div class="container">
-
-<h2>Phase 2: Define — What Should the Agent Do?</h2>
-
-<p>
-A useful human-agent teaming design needs to distinguish between tasks that are appropriate for autonomous execution and tasks where human involvement remains important.
-</p>
-
-<div class="insight-grid">
-
-<div class="insight-card">
-
-<h3>Agent Responsibilities</h3>
-
-<ul>
-
-<li>Tasks requiring continuous monitoring</li>
-
-<li>High-volume or repetitive information processing</li>
-
-<li>Detection of predefined patterns</li>
-
-<li>Rapid execution of well-defined actions</li>
-
-</ul>
-
-</div>
-
-
-<div class="insight-card">
-
-<h3>Human Responsibilities</h3>
-
-<ul>
-
-<li>Context-dependent judgment</li>
-
-<li>Resolving ambiguous situations</li>
-
-<li>Managing unexpected conditions</li>
-
-<li>Making decisions involving competing objectives</li>
-
-</ul>
-
-</div>
-
-
-<div class="insight-card">
-
-<h3>Shared Responsibilities</h3>
-
-<ul>
-
-<li>Situation assessment</li>
-
-<li>Decision making under uncertainty</li>
-
-<li>Monitoring changing conditions</li>
-
-<li>Recovery from unexpected events</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FAILURE MODES -->
-
-<section>
-
-<div class="container">
-
-<h2>Phase 3: Anticipate — Designing for Failure</h2>
-
-<p>
-A major part of the analysis focused on what happens when the system does not behave as expected.
-</p>
-
-<p>
-For each scenario, I considered potential failures by either teammate and then examined whether the other teammate would have sufficient information and capability to recognize and respond to the failure.
-</p>
-
-<div class="case-callout">
-
-<strong>The critical question was not simply “Can the agent perform the task?”</strong>
-
-<p style="margin-top:10px; margin-bottom:0;">
-It was “If the agent performs the task incorrectly, will the human recognize the problem in time to do something about it?”
-</p>
-
-</div>
-
-<p>
-This shifted the analysis from autonomous performance alone toward team-level resilience.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- FAILURE RECOVERY -->
-
-<section>
-
-<div class="container">
-
-<h2>Human-Agent Failure and Recovery</h2>
-
-<p>
-Human-agent teams create a reciprocal relationship: the human may need to supervise the agent, but the agent may also need to support the human when the human is overloaded, uncertain, or unable to complete a task.
-</p>
-
-<p>
-I therefore considered failure recovery in both directions.
+Rather than treating “system failure” as a single category, I considered failures according to <strong>who failed, whether the failure was detected, and whether the other teammate could recover from it.</strong>
 </p>
 
 <div class="insight-grid">
@@ -385,7 +497,7 @@ I therefore considered failure recovery in both directions.
 <h3>Agent Failure</h3>
 
 <p>
-The human detects an incorrect, incomplete, or unexpected agent action and intervenes or compensates.
+The agent produces an incorrect, incomplete, or inappropriate action or recommendation.
 </p>
 
 </div>
@@ -395,20 +507,58 @@ The human detects an incorrect, incomplete, or unexpected agent action and inter
 <h3>Human Failure</h3>
 
 <p>
-The agent detects conditions suggesting that the human may have missed information or made an incorrect decision.
+The human makes an incorrect decision, misses information, or fails to act when action is required.
 </p>
 
 </div>
 
 <div class="insight-card">
 
-<h3>Team Recovery</h3>
+<h3>Detection Failure</h3>
 
 <p>
-The system provides the information, alerts, or intervention mechanisms needed to recover without losing overall task effectiveness.
+A teammate fails to recognize that the other teammate has encountered a problem.
 </p>
 
 </div>
+
+<div class="insight-card">
+
+<h3>Coordination Failure</h3>
+
+<p>
+Human and agent form incompatible expectations about goals, actions, or responsibilities.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Intervention Failure</h3>
+
+<p>
+A problem is recognized, but the human or agent cannot intervene effectively.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Recovery</h3>
+
+<p>
+The team detects the problem, reallocates responsibility, and restores effective task performance.
+</p>
+
+</div>
+
+</div>
+
+<div class="case-callout">
+
+<strong>Key question:</strong>
+
+If one teammate fails, does the other teammate have enough information, authority, time, and capability to detect the failure and compensate for it?
 
 </div>
 
@@ -417,7 +567,36 @@ The system provides the information, alerts, or intervention mechanisms needed t
 </section>
 
 
-<!-- SITUATION AWARENESS -->
+<!-- FAILURE AND RECOVERY -->
+
+<section>
+
+<div class="container">
+
+<h2>Designing for Failure, Not Just Success</h2>
+
+<p>
+A major part of the analysis focused on what happens when the system does not behave as expected.
+</p>
+
+<p>
+For each scenario, I considered potential failures by either teammate and then examined whether the other teammate would have sufficient information and capability to recognize and respond to the failure.
+</p>
+
+<p>
+This shifted the analysis from autonomous performance alone toward <strong>team-level resilience</strong>.
+</p>
+
+<p>
+The broader human-autonomy teaming literature similarly emphasizes interdependence: humans and autonomous agents occupy distinct roles but depend on one another to achieve the team's common goal. :contentReference[oaicite:4]{index=4}
+</p>
+
+</div>
+
+</section>
+
+
+<!-- SHARED AWARENESS -->
 
 <section>
 
@@ -458,32 +637,88 @@ The appropriate level of information depends on the task. More information is no
 </section>
 
 
-<!-- TRUST -->
+<!-- RELIANCE FRAMEWORK -->
 
 <section>
 
 <div class="container">
 
-<h2>Trust and Reliance</h2>
+<h2>Framework 4: Calibrated Reliance</h2>
 
 <p>
-Trust becomes particularly important when the agent's capabilities are imperfect.
+A separate framework addressed the relationship between system capability, human trust, and actual reliance on the agent.
 </p>
 
 <p>
-A human who distrusts a capable agent may unnecessarily take over tasks that the agent could perform effectively. Conversely, excessive trust may lead the human to accept an incorrect recommendation without sufficient verification.
+The underlying principle is that successful automation should support <strong>appropriate reliance</strong>, rather than simply maximizing trust. The human's reliance should be consistent with what the system can actually do under the circumstances.
 </p>
 
-<div class="case-callout">
+<div class="insight-grid">
 
-<strong>Research objective:</strong>
+<div class="insight-card">
 
-The goal is not to maximize trust in the agent. It is to support <strong>calibrated reliance</strong> — reliance that is appropriate to the agent's actual capabilities and the demands of the situation.
+<h3>System Capability</h3>
+
+<p>
+How reliable is the agent for this task and under these conditions?
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Human Understanding</h3>
+
+<p>
+Does the human understand the agent's capabilities and limitations?
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Trust</h3>
+
+<p>
+How does the human's confidence in the agent develop?
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Reliance</h3>
+
+<p>
+Does the human accept, verify, reject, or override the agent's output?
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Outcome</h3>
+
+<p>
+What happens to task performance, errors, workload, and recovery?
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Feedback</h3>
+
+<p>
+Does experience with the system update the human's understanding of its capabilities?
+</p>
+
+</div>
 
 </div>
 
 <p>
-This distinction is particularly relevant to AI systems because model performance can vary across contexts, data conditions, and task types.
+This approach is consistent with the human-automation trust literature, which emphasizes designing automation so that human reliance is appropriately calibrated to system capabilities and context.
 </p>
 
 </div>
@@ -508,6 +743,10 @@ If an autonomous system requires continuous monitoring, the human may become ove
 </p>
 
 <p>
+This is particularly important in management-by-exception systems. The human may spend less time actively performing the task while taking on a different cognitive role: monitoring system state, detecting exceptions, interpreting what happened, and deciding when to intervene. Research on automation has identified workload, situation awareness, complacency, and skill degradation as important human-performance considerations when designing automation. :contentReference[oaicite:5]{index=5}
+</p>
+
+<p>
 The design therefore needs to consider when the human should:
 </p>
 
@@ -525,8 +764,87 @@ The design therefore needs to consider when the human should:
 
 </ul>
 
+</div>
+
+</section>
+
+
+<!-- RESPONSIBILITY FRAMEWORK -->
+
+<section>
+
+<div class="container">
+
+<h2>Framework 5: Human Responsibility & Capability Preservation</h2>
+
 <p>
-These decisions can be framed as workload and risk tradeoffs rather than as a simple choice between “human” and “automation.”
+The final framework connected task allocation with a broader human-factors question: what happens to human capability when increasingly capable systems take over portions of a task?
+</p>
+
+<div class="case-callout">
+
+<strong>For each candidate task:</strong>
+
+<p style="margin-top:10px; margin-bottom:0;">
+Can the agent perform it?
+<br>
+Should the agent perform it?
+<br>
+What must remain under human responsibility?
+<br>
+What must remain independently verifiable?
+<br>
+What human capability could be weakened through repeated delegation?
+</p>
+
+</div>
+
+<div class="insight-grid">
+
+<div class="insight-card">
+
+<h3>Delegation</h3>
+
+<p>
+Identify work that can be safely and effectively delegated to the agent.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Human Retention</h3>
+
+<p>
+Identify decisions, knowledge, or skills that should remain with the human.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Verification</h3>
+
+<p>
+Identify outputs that require meaningful human verification rather than passive acceptance.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Capability Effects</h3>
+
+<p>
+Consider how repeated delegation could change human knowledge, skill, judgment, or situation awareness.
+</p>
+
+</div>
+
+</div>
+
+<p>
+This reflects a longstanding human-factors concern that automation can change human activity rather than simply remove it. The human may perform less of the original task while taking on new monitoring, coordination, and recovery responsibilities. :contentReference[oaicite:6]{index=6}
 </p>
 
 </div>
@@ -534,7 +852,7 @@ These decisions can be framed as workload and risk tradeoffs rather than as a si
 </section>
 
 
-<!-- RESEARCH OUTPUT -->
+<!-- FROM RESEARCH TO DESIGN -->
 
 <section>
 
@@ -543,7 +861,7 @@ These decisions can be framed as workload and risk tradeoffs rather than as a si
 <h2>From Research to Design Requirements</h2>
 
 <p>
-The analysis translated human-agent teaming considerations into requirements that could inform system design.
+The frameworks translated the human-agent analysis into requirements that could inform system design.
 </p>
 
 <div class="insight-grid">
@@ -615,7 +933,7 @@ Allow the division of responsibility to change as task conditions and system cap
 </section>
 
 
-<!-- WHY THIS MATTERS -->
+<!-- AI PRODUCT RESEARCH -->
 
 <section>
 
@@ -662,49 +980,144 @@ These are fundamentally human factors and product research questions, not simply
 
 <div class="container">
 
-<h2>Research Artifact</h2>
+<h2>Research Artifacts</h2>
 
 <p>
-A natural next step for this work is an interactive human-agent teaming framework that allows a product team to examine a task and identify:
+The analytical approach can be represented as a set of complementary research artifacts:
+</p>
+
+<div class="insight-grid">
+
+<div class="insight-card">
+
+<h3>Task Allocation Map</h3>
+
+<p>
+Maps tasks, decisions, actions, monitoring responsibilities, and recovery responsibilities across human and agent.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Automation Management Map</h3>
+
+<p>
+Shows where different human-control strategies — including management by consent and management by exception — may be appropriate.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Failure & Recovery Matrix</h3>
+
+<p>
+Maps potential human and agent failures to detection, intervention, and recovery mechanisms.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Reliance Framework</h3>
+
+<p>
+Connects agent capability, human understanding, trust, reliance, and behavioral outcomes.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Responsibility Map</h3>
+
+<p>
+Identifies what should remain human-controlled, what can be delegated, and what requires verification.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Evaluation Framework</h3>
+
+<p>
+Connects the design to measurable outcomes including task performance, workload, situation awareness, reliance, intervention, and recovery.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EVALUATION -->
+
+<section>
+
+<div class="container">
+
+<h2>How I Would Evaluate the Team</h2>
+
+<p>
+The frameworks provide hypotheses that can be tested empirically rather than treated as design assumptions.
+</p>
+
+<p>
+A controlled evaluation could manipulate:
 </p>
 
 <ul>
 
-<li>Human responsibilities</li>
+<li>Agent reliability</li>
 
-<li>Agent responsibilities</li>
+<li>Degree of autonomy</li>
 
-<li>Shared responsibilities</li>
+<li>Automation-management strategy</li>
 
-<li>Potential failure modes</li>
+<li>Explanation and uncertainty information</li>
 
-<li>Detection and intervention mechanisms</li>
+<li>Task complexity</li>
 
-<li>Workload implications</li>
+<li>Time pressure</li>
 
-<li>Information and transparency requirements</li>
+<li>Human workload</li>
+
+<li>Failure severity</li>
 
 </ul>
 
-<div class="case-callout">
+<p>
+Behavioral measures could include:
+</p>
 
-<strong>Design principle:</strong>
+<ul>
 
-A successful AI system should not merely perform tasks autonomously. It should support the human-AI team in remaining effective when conditions are uncertain, unexpected, or outside the system's capabilities.
+<li>Task performance</li>
 
-</div>
+<li>Error detection</li>
 
-<!--
-Future interactive artifact can be embedded here:
+<li>Intervention timing</li>
 
-<iframe
-  src="assets/human-agent-teaming-framework.html"
-  width="100%"
-  height="750px"
-  style="border:none; border-radius:12px;"
-  title="Human-Agent Teaming Framework">
-</iframe>
--->
+<li>Reliance and override decisions</li>
+
+<li>Recovery performance</li>
+
+<li>Mental workload</li>
+
+<li>Situation awareness</li>
+
+<li>Trust calibration</li>
+
+</ul>
+
+<p>
+This would allow the research to examine not only what people say about AI, but how they actually behave when deciding whether to rely on it.
+</p>
 
 </div>
 
@@ -720,35 +1133,15 @@ Future interactive artifact can be embedded here:
 <h2>Limitations and Next Steps</h2>
 
 <p>
-This portfolio case study presents the research and systems-analysis approach rather than claiming a completed empirical evaluation of a commercial AI system.
+This portfolio case study presents the human-factors research and systems-analysis approach rather than claiming a completed empirical evaluation of a commercial AI system.
 </p>
 
 <p>
-A next phase would test these concepts experimentally by manipulating factors such as:
-</p>
-
-<ul>
-
-<li>Agent reliability</li>
-
-<li>Degree of autonomy</li>
-
-<li>Explanation and uncertainty information</li>
-
-<li>Task complexity</li>
-
-<li>Time pressure</li>
-
-<li>Human workload</li>
-
-</ul>
-
-<p>
-Behavioral measures could include reliance decisions, intervention timing, error detection, task performance, workload, situation awareness, and recovery from agent failures.
+The frameworks shown here should therefore be understood as analytical tools informed by established research, not as newly validated scientific taxonomies.
 </p>
 
 <p>
-This would allow the research to examine not only what people say about AI, but how they actually behave when deciding whether to rely on it.
+A next phase would operationalize the frameworks into an experimental or prototype-based evaluation and test how different allocations of responsibility affect human and team performance.
 </p>
 
 </div>
@@ -775,8 +1168,92 @@ The important question is not how much work AI can take over. It is how to desig
 </div>
 
 <p>
-My human factors background provides a way to evaluate AI systems from that broader perspective: not only whether the technology works, but how it changes human decision making, workload, awareness, responsibility, and the ability to recover when things go wrong.
+My human factors background provides a way to evaluate AI systems from that broader perspective: not only whether the technology works, but how it changes human decision making, workload, awareness, responsibility, reliance, and the ability to recover when things go wrong.
 </p>
+
+</div>
+
+</section>
+
+
+<!-- REFERENCES -->
+
+<section>
+
+<div class="container">
+
+<h2>References</h2>
+
+<p>
+Selected research informing the frameworks and analysis:
+</p>
+
+<ol>
+
+<li>
+Dekker, S. W. A., & Woods, D. D. (1999).
+<em>To intervene or not to intervene: The dilemma of management by exception.</em>
+Cognition, Technology & Work, 1, 86–96.
+<a href="https://doi.org/10.1007/s101110050035" target="_blank" rel="noopener">
+DOI
+</a>
+</li>
+
+<li>
+Lee, J. D., & See, K. A. (2004).
+<em>Trust in automation: Designing for appropriate reliance.</em>
+Human Factors, 46(1), 50–80.
+<a href="https://doi.org/10.1518/hfes.46.1.50_30392" target="_blank" rel="noopener">
+DOI
+</a>
+</li>
+
+<li>
+O'Neill, T. A., Flathmann, C., McNeese, N. J., & Salas, E. (2023).
+<em>Human-autonomy teaming: Need for a guiding team-based framework?</em>
+Computers in Human Behavior, 146, 107762.
+<a href="https://doi.org/10.1016/j.chb.2023.107762" target="_blank" rel="noopener">
+DOI
+</a>
+</li>
+
+<li>
+Olson, W. A., & Sarter, N. B. (2001).
+<em>Management by consent in human-machine systems: When and why it breaks down.</em>
+Human Factors, 43(2), 255–266.
+<a href="https://doi.org/10.1518/001872001775900904" target="_blank" rel="noopener">
+DOI
+</a>
+</li>
+
+<li>
+Parasuraman, R., Sheridan, T. B., & Wickens, C. D. (2000).
+<em>A model for types and levels of human interaction with automation.</em>
+IEEE Transactions on Systems, Man, and Cybernetics—Part A: Systems and Humans, 30(3), 286–297.
+<a href="https://doi.org/10.1109/3468.844354" target="_blank" rel="noopener">
+DOI
+</a>
+</li>
+
+<li>
+Parasuraman, R. (2000).
+<em>Designing automation for human use: Empirical studies and quantitative models.</em>
+Ergonomics, 43(7), 931–951.
+<a href="https://doi.org/10.1080/001401300409125" target="_blank" rel="noopener">
+DOI
+</a>
+</li>
+
+<li>
+Roth, E. M., Sushereba, C., Militello, L. G., Diiulio, J., & Ernst, K. (2019).
+<em>Function allocation considerations in the era of human autonomy teaming.</em>
+Journal of Cognitive Engineering and Decision Making, 13(4).
+<a href="https://doi.org/10.1177/1555343419878038" target="_blank" rel="noopener">
+DOI
+</a>
+</li>
+
+</ol>
 
 </div>
 
@@ -797,9 +1274,11 @@ My human factors background provides a way to evaluate AI systems from that broa
 
 
 <script>
+
 /*
-Optional event tracking for future interactive artifact.
+Optional event tracking for future interactive artifacts.
 */
+
 document.addEventListener('click', function(event) {
 
   const target = event.target.closest('[data-agent-event]');
@@ -813,6 +1292,7 @@ document.addEventListener('click', function(event) {
   });
 
 });
+
 </script>
 
 </body>
