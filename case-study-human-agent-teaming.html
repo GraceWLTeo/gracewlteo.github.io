@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Case Study: Human-Agent Teaming in Complex Operational Environments</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4S8E37RPM"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Z4S8E37RPM');
+
+gtag('event', 'case_study_view', {
+  case_study: 'human-agent-teaming'
+});
+</script>
+
+</head>
+
+<body>
+
+<nav>
+<div class="container">
+
+<div>
+<strong>Grace Teo</strong>
+</div>
+
+<div>
+<a href="index.html">Home</a>
+<a href="case-study-decision-support.html">Decision Support</a>
+<a href="case-study-market-expansion.html">Market Expansion</a>
+<a href="case-study-human-agent-teaming.html" class="active">Human-Agent Teaming</a>
+<a href="assets/GraceTeo_SrUXResearcher_Resume.pdf">Resume</a>
+</div>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="case-hero">
+
+<div class="container">
+
+<h1>
+Human-Agent Teaming in Complex Operational Environments
+</h1>
+
+<p class="subtitle">
+Researching how humans and autonomous agents can work together effectively when tasks are complex, dynamic, and consequences matter.
+</p>
+
+
+<div class="case-meta">
+
+<div>
+<strong>Role</strong>
+Lead Scientist / Human Factors Researcher
+</div>
+
+<div>
+<strong>Focus</strong>
+Human-Agent Teaming
+</div>
+
+<div>
+<strong>Methods</strong>
+Task Analysis, Scenario Design, Behavioral Research, Human Factors
+</div>
+
+<div>
+<strong>Output</strong>
+Human-Agent Teaming Requirements & Research Framework
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OVERVIEW -->
+
+<section>
+
+<div class="container">
+
+<h2>Overview</h2>
+
+<p class="case-section-intro">
+As autonomous systems become more capable, the central design question is no longer simply what the technology can do. It is how responsibility should be divided between the human and the agent, and how each teammate should respond when the other makes a mistake.
+</p>
+
+<p>
+I studied human-agent teaming in complex operational environments to understand how tasks could be distributed between human operators and autonomous agents, what could go wrong, and how the human and agent could detect, communicate, and compensate for one another's failures.
+</p>
+
+<div class="case-callout">
+
+<strong>Research principle:</strong>
+
+The goal was not to automate as much of the work as possible. The goal was to determine which responsibilities should remain with the human, which could be delegated to an agent, and what information and intervention mechanisms were necessary for the team to remain effective.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROBLEM -->
+
+<section>
+
+<div class="container">
+
+<h2>The Problem</h2>
+
+<p>
+Autonomous systems can perform increasingly complex tasks, but simply assigning tasks to an agent does not guarantee that the overall human-agent team will perform better.
+</p>
+
+<p>
+In dynamic environments, both teammates can have incomplete information, make errors, or misunderstand what the other is doing. A human may need to recognize that an agent has failed, understand why it failed, and intervene before the failure affects the larger task.
+</p>
+
+<p>
+This creates a different design problem from conventional automation:
+</p>
+
+<div class="insight-grid">
+
+<div class="insight-card">
+
+<h3>Task Allocation</h3>
+
+<p>
+Which tasks should be performed by the human, the agent, or jointly?
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Shared Awareness</h3>
+
+<p>
+How does each teammate know what the other is doing, attempting to do, or unable to do?
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Failure Recovery</h3>
+
+<p>
+How does the team detect, communicate, and recover when either teammate makes a mistake?
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RESEARCH APPROACH -->
+
+<section>
+
+<div class="container">
+
+<h2>Research Approach</h2>
+
+<p>
+I approached the problem as a human-agent systems problem rather than as an automation problem.
+</p>
+
+<ul>
+
+<li>
+Developed representative operational scenarios to examine how humans and autonomous agents would interact during complex tasks.
+</li>
+
+<li>
+Conducted task analysis to identify human responsibilities, agent responsibilities, dependencies, information requirements, and potential failure points.
+</li>
+
+<li>
+Considered both normal operations and situations in which either the human or agent could fail.
+</li>
+
+<li>
+Identified opportunities for the human teammate to detect, intervene in, or compensate for agent failures.
+</li>
+
+<li>
+Examined how workload, situation awareness, trust, and information availability could affect human intervention.
+</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- TASK ALLOCATION -->
+
+<section>
+
+<div class="container">
+
+<h2>Phase 1: Understand — Decomposing the Team's Work</h2>
+
+<p>
+The first step was to understand the work before deciding what should be automated.
+</p>
+
+<p>
+Rather than beginning with a particular autonomous capability, I decomposed the operational scenarios into individual tasks and subtasks. Each task was examined in terms of its information requirements, decision requirements, timing, consequences of failure, and potential for human or agent involvement.
+</p>
+
+<div class="case-callout">
+
+<strong>Key question:</strong>
+
+What does the team need to accomplish, and what is the appropriate role for each teammate at each point in the task?
+
+</div>
+
+<p>
+This resulted in a task-level view of human-agent responsibilities rather than treating the autonomous system as a single black-box capability.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- HUMAN VS AGENT -->
+
+<section>
+
+<div class="container">
+
+<h2>Phase 2: Define — What Should the Agent Do?</h2>
+
+<p>
+A useful human-agent teaming design needs to distinguish between tasks that are appropriate for autonomous execution and tasks where human involvement remains important.
+</p>
+
+<div class="insight-grid">
+
+<div class="insight-card">
+
+<h3>Agent Responsibilities</h3>
+
+<ul>
+
+<li>Tasks requiring continuous monitoring</li>
+
+<li>High-volume or repetitive information processing</li>
+
+<li>Detection of predefined patterns</li>
+
+<li>Rapid execution of well-defined actions</li>
+
+</ul>
+
+</div>
+
+
+<div class="insight-card">
+
+<h3>Human Responsibilities</h3>
+
+<ul>
+
+<li>Context-dependent judgment</li>
+
+<li>Resolving ambiguous situations</li>
+
+<li>Managing unexpected conditions</li>
+
+<li>Making decisions involving competing objectives</li>
+
+</ul>
+
+</div>
+
+
+<div class="insight-card">
+
+<h3>Shared Responsibilities</h3>
+
+<ul>
+
+<li>Situation assessment</li>
+
+<li>Decision making under uncertainty</li>
+
+<li>Monitoring changing conditions</li>
+
+<li>Recovery from unexpected events</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAILURE MODES -->
+
+<section>
+
+<div class="container">
+
+<h2>Phase 3: Anticipate — Designing for Failure</h2>
+
+<p>
+A major part of the analysis focused on what happens when the system does not behave as expected.
+</p>
+
+<p>
+For each scenario, I considered potential failures by either teammate and then examined whether the other teammate would have sufficient information and capability to recognize and respond to the failure.
+</p>
+
+<div class="case-callout">
+
+<strong>The critical question was not simply “Can the agent perform the task?”</strong>
+
+<p style="margin-top:10px; margin-bottom:0;">
+It was “If the agent performs the task incorrectly, will the human recognize the problem in time to do something about it?”
+</p>
+
+</div>
+
+<p>
+This shifted the analysis from autonomous performance alone toward team-level resilience.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FAILURE RECOVERY -->
+
+<section>
+
+<div class="container">
+
+<h2>Human-Agent Failure and Recovery</h2>
+
+<p>
+Human-agent teams create a reciprocal relationship: the human may need to supervise the agent, but the agent may also need to support the human when the human is overloaded, uncertain, or unable to complete a task.
+</p>
+
+<p>
+I therefore considered failure recovery in both directions.
+</p>
+
+<div class="insight-grid">
+
+<div class="insight-card">
+
+<h3>Agent Failure</h3>
+
+<p>
+The human detects an incorrect, incomplete, or unexpected agent action and intervenes or compensates.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Human Failure</h3>
+
+<p>
+The agent detects conditions suggesting that the human may have missed information or made an incorrect decision.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Team Recovery</h3>
+
+<p>
+The system provides the information, alerts, or intervention mechanisms needed to recover without losing overall task effectiveness.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SITUATION AWARENESS -->
+
+<section>
+
+<div class="container">
+
+<h2>Maintaining Shared Situation Awareness</h2>
+
+<p>
+Effective teaming requires more than giving the human an AI recommendation. The human needs an appropriate understanding of what the agent is doing, why it is doing it, and where its limitations may matter.
+</p>
+
+<p>
+This led to consideration of information requirements such as:
+</p>
+
+<ul>
+
+<li>What the agent currently believes or detects</li>
+
+<li>What action the agent is taking or proposing</li>
+
+<li>Why the agent selected that action</li>
+
+<li>What information the agent is uncertain about</li>
+
+<li>What conditions could cause the agent's recommendation to become unreliable</li>
+
+<li>When human intervention is required</li>
+
+</ul>
+
+<p>
+The appropriate level of information depends on the task. More information is not necessarily better if it increases workload or distracts the operator from the larger situation.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- TRUST -->
+
+<section>
+
+<div class="container">
+
+<h2>Trust and Reliance</h2>
+
+<p>
+Trust becomes particularly important when the agent's capabilities are imperfect.
+</p>
+
+<p>
+A human who distrusts a capable agent may unnecessarily take over tasks that the agent could perform effectively. Conversely, excessive trust may lead the human to accept an incorrect recommendation without sufficient verification.
+</p>
+
+<div class="case-callout">
+
+<strong>Research objective:</strong>
+
+The goal is not to maximize trust in the agent. It is to support <strong>calibrated reliance</strong> — reliance that is appropriate to the agent's actual capabilities and the demands of the situation.
+
+</div>
+
+<p>
+This distinction is particularly relevant to AI systems because model performance can vary across contexts, data conditions, and task types.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- WORKLOAD -->
+
+<section>
+
+<div class="container">
+
+<h2>Workload and Intervention</h2>
+
+<p>
+Human involvement also has a cost.
+</p>
+
+<p>
+If an autonomous system requires continuous monitoring, the human may become overloaded even when the agent performs most of the physical or computational work. Conversely, removing the human entirely may eliminate the judgment needed to handle unexpected conditions.
+</p>
+
+<p>
+The design therefore needs to consider when the human should:
+</p>
+
+<ul>
+
+<li>Monitor the agent continuously</li>
+
+<li>Review agent recommendations periodically</li>
+
+<li>Be alerted only when intervention is needed</li>
+
+<li>Take control of the task</li>
+
+<li>Allow the agent to continue autonomously</li>
+
+</ul>
+
+<p>
+These decisions can be framed as workload and risk tradeoffs rather than as a simple choice between “human” and “automation.”
+</p>
+
+</div>
+
+</section>
+
+
+<!-- RESEARCH OUTPUT -->
+
+<section>
+
+<div class="container">
+
+<h2>From Research to Design Requirements</h2>
+
+<p>
+The analysis translated human-agent teaming considerations into requirements that could inform system design.
+</p>
+
+<div class="insight-grid">
+
+<div class="insight-card">
+
+<h3>Responsibility</h3>
+
+<p>
+Clearly define which teammate is responsible for each task and decision.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Transparency</h3>
+
+<p>
+Provide enough information for the human to understand the agent's actions, limitations, and uncertainty.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Intervention</h3>
+
+<p>
+Give the human meaningful opportunities to intervene when the agent encounters conditions outside its capabilities.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Recovery</h3>
+
+<p>
+Design explicit mechanisms for detecting and recovering from human or agent errors.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Workload</h3>
+
+<p>
+Avoid creating a supervisory burden that offsets the benefits of automation.
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<h3>Adaptation</h3>
+
+<p>
+Allow the division of responsibility to change as task conditions and system capabilities change.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY THIS MATTERS -->
+
+<section>
+
+<div class="container">
+
+<h2>Why This Matters for AI Product Research</h2>
+
+<p>
+Many AI product questions are framed around model performance: accuracy, latency, benchmark scores, or task completion.
+</p>
+
+<p>
+Human-agent teaming introduces another layer of questions:
+</p>
+
+<ul>
+
+<li>Will people understand what the system can and cannot do?</li>
+
+<li>Will they know when to verify an AI recommendation?</li>
+
+<li>Can they recognize when the AI is wrong?</li>
+
+<li>Will the system create excessive monitoring or verification workload?</li>
+
+<li>What human capabilities may be affected if the system takes over too much of the task?</li>
+
+<li>How should responsibility be divided when both the human and AI contribute to an outcome?</li>
+
+</ul>
+
+<p>
+These are fundamentally human factors and product research questions, not simply model-development questions.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- RESEARCH ARTIFACT -->
+
+<section>
+
+<div class="container">
+
+<h2>Research Artifact</h2>
+
+<p>
+A natural next step for this work is an interactive human-agent teaming framework that allows a product team to examine a task and identify:
+</p>
+
+<ul>
+
+<li>Human responsibilities</li>
+
+<li>Agent responsibilities</li>
+
+<li>Shared responsibilities</li>
+
+<li>Potential failure modes</li>
+
+<li>Detection and intervention mechanisms</li>
+
+<li>Workload implications</li>
+
+<li>Information and transparency requirements</li>
+
+</ul>
+
+<div class="case-callout">
+
+<strong>Design principle:</strong>
+
+A successful AI system should not merely perform tasks autonomously. It should support the human-AI team in remaining effective when conditions are uncertain, unexpected, or outside the system's capabilities.
+
+</div>
+
+<!--
+Future interactive artifact can be embedded here:
+
+<iframe
+  src="assets/human-agent-teaming-framework.html"
+  width="100%"
+  height="750px"
+  style="border:none; border-radius:12px;"
+  title="Human-Agent Teaming Framework">
+</iframe>
+-->
+
+</div>
+
+</section>
+
+
+<!-- LIMITATIONS -->
+
+<section>
+
+<div class="container">
+
+<h2>Limitations and Next Steps</h2>
+
+<p>
+This portfolio case study presents the research and systems-analysis approach rather than claiming a completed empirical evaluation of a commercial AI system.
+</p>
+
+<p>
+A next phase would test these concepts experimentally by manipulating factors such as:
+</p>
+
+<ul>
+
+<li>Agent reliability</li>
+
+<li>Degree of autonomy</li>
+
+<li>Explanation and uncertainty information</li>
+
+<li>Task complexity</li>
+
+<li>Time pressure</li>
+
+<li>Human workload</li>
+
+</ul>
+
+<p>
+Behavioral measures could include reliance decisions, intervention timing, error detection, task performance, workload, situation awareness, and recovery from agent failures.
+</p>
+
+<p>
+This would allow the research to examine not only what people say about AI, but how they actually behave when deciding whether to rely on it.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- KEY TAKEAWAY -->
+
+<section>
+
+<div class="container">
+
+<h2>Key Takeaway</h2>
+
+<div class="case-callout">
+
+<p style="font-size:1.15rem; margin-bottom:0;">
+<strong>
+The important question is not how much work AI can take over. It is how to design the human-agent team so that each teammate contributes what the other cannot reliably provide.
+</strong>
+</p>
+
+</div>
+
+<p>
+My human factors background provides a way to evaluate AI systems from that broader perspective: not only whether the technology works, but how it changes human decision making, workload, awareness, responsibility, and the ability to recover when things go wrong.
+</p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="container">
+
+<p>
+<a href="index.html">Back to Home</a>
+</p>
+
+</div>
+
+</footer>
+
+
+<script>
+/*
+Optional event tracking for future interactive artifact.
+*/
+document.addEventListener('click', function(event) {
+
+  const target = event.target.closest('[data-agent-event]');
+
+  if (!target || typeof gtag !== 'function') {
+    return;
+  }
+
+  gtag('event', 'human_agent_teaming_interaction', {
+    interaction_type: target.dataset.agentEvent
+  });
+
+});
+</script>
+
+</body>
+</html>
